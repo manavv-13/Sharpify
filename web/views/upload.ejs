@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+
+<div id="loader-overlay" class="loader-overlay" style="display: none;">
+    <div class="spinner"></div>
+    <p class="loader-text">Processing your image...</p>
+</div>
+
+<h1 class="text-center mb-4 text-white">Upload and Process Your Image</h1>
+<form action="/process" method="POST" enctype="multipart/form-data" class="text-center upload-form" id="image-form">
+    <div class="upload-container">
+        <label for="file-input" class="upload-box">
+            <i class="fa-solid fa-cloud-arrow-up fa-4x mb-3"></i>
+            <p class="mb-2" id="upload-text">Drag & Drop your image here or click to upload</p>
+            <p class="file-name" id="file-name" style="display: none;">No file selected</p>
+        </label>
+        <input type="file" id="file-input" name="image" class="file-input" accept=".jpg,.jpeg,.png" required>
+    </div>
+    <button type="submit" class="btn btn-success mt-3">Process Image</button>
+</form>
+
+
+
+<% if (inputImage && outputImage) { %>
+    <div class="row mt-5">
+        <div class="col-md-6 text-center">
+            <h3 class="text-white">Input Image</h3>
+            <img src= "<%= inputImage%>" class="img-fluid" alt="Input Image">
+        </div>
+        <div class="col-md-6 text-center">
+            <h3 class="text-white">Deblurred Image</h3>
+            <img src="<%= outputImage %>" class="img-fluid" alt="Deblurred Image">
+            <br>
+            <a href="<%= outputImage %>" download class="btn btn-primary mt-3">Download Image</a>
+        </div>
+    </div>
+<% } %>
