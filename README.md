@@ -5,7 +5,7 @@ Sharpify is an AI-driven software solution for image enhancement, focusing on im
 
 Image Deblurring: Removes motion blur, defocus blur, and other distortions to enhance image sharpness.
 
-Image Translation: Converts images between different domains or styles (e.g., grayscale to color). (**Feature not works yet, due to incompatible device**)
+Image Translation: Converts images between different domains or styles (e.g., grayscale to color). (**Feature does not work yet as I wasn't able to train the model due to incompatible device**)
 
 User-Friendly Interface: Intuitive platform for users of all technical levels.
 
@@ -65,4 +65,4 @@ Download: Save the processed image for your needs.
 
 
 
-**There are two more folders that I haven't uploaded - **data** and **testing** which contained dataset which I used and testing images which I used to test the accuracy of model**
+**There are two more folders that I haven't uploaded - **data** and **testing** which contained dataset which I used and testing images which I used to test the accuracy of model respecitvely**
